@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOLCE — Music and Dance Gala | 25 de abril, 2026</title>
+  <meta name="description" content="Una noche de música y danza en Los Establos Ciudad Ecuestre. Santo Domingo, 25 de abril de 2026." />
+  <meta property="og:title" content="DOLCE — Music and Dance Gala" />
+  <meta property="og:description" content="Una noche de música y danza en Los Establos Ciudad Ecuestre. Santo Domingo, 25 de abril de 2026." />
+  <meta property="og:image" content="https://rapidotickets.com/cdn-cgi/image/width=1080,format=jpeg,metadata=none,quality=85,sharpen=1/https://images.rapidotickets.com/c6ded695-f2b1-4e11-8742-82b45d476c2f" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #c9a96e;
+      --gold-light: #e8d5a8;
+      --black: #050505;
+      --dark: #0d1208;
+      --green-dark: #0a110a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      padding: 0 1.5rem 5rem;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://rapidotickets.com/cdn-cgi/image/width=1080,format=jpeg,metadata=none,quality=85,sharpen=1/https://images.rapidotickets.com/c6ded695-f2b1-4e11-8742-82b45d476c2f');
+      background-size: cover;
+      background-position: center top;
+      transform: scale(1.04);
+      animation: subtle-zoom 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes subtle-zoom {
+      from { transform: scale(1.04); }
+      to   { transform: scale(1.08); }
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(5,5,5,0.15) 0%,
+        rgba(5,5,5,0.1)  35%,
+        rgba(5,5,5,0.55) 65%,
+        rgba(5,5,5,0.92) 100%
+      );
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+    }
+
+    .hero__eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .hero__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(5rem, 18vw, 10rem);
+      font-weight: 300;
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+      color: #fff;
+      text-shadow: 0 2px 40px rgba(0,0,0,0.5);
+    }
+
+    .hero__subtitle {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-top: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero__divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 2.5rem;
+      opacity: 0.7;
+    }
+
+    .hero__meta {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.03em;
+      line-height: 1.8;
+    }
+
+    /* ── COUNTDOWN ── */
+    .countdown-section {
+      position: relative;
+      z-index: 2;
+      padding: 4rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(5,5,5,0) 0%, var(--green-dark) 30%);
+    }
+
+    .countdown-label {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: clamp(1.5rem, 5vw, 4rem);
+      flex-wrap: wrap;
+    }
+
+    .countdown__unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .countdown__number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 10vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1;
+      color: #fff;
+      min-width: 2ch;
+      text-align: center;
+    }
+
+    .countdown__text {
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.8;
+    }
+
+    .countdown__sep {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: var(--gold);
+      opacity: 0.3;
+      align-self: flex-start;
+      margin-top: 0.3rem;
+      line-height: 1;
+    }
+
+    /* ── DETAILS ── */
+    .details {
+      padding: 3rem 1.5rem 5rem;
+      text-align: center;
+      background: var(--green-dark);
+    }
+
+    .details__inner {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .details__item {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+    }
+
+    .details__item:last-child { border-bottom: none; }
+
+    .details__icon {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.6;
+    }
+
+    .details__label {
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .details__value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      padding: 4rem 1.5rem 6rem;
+      text-align: center;
+      background: var(--green-dark);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--black);
+      background: var(--gold);
+      padding: 1.1rem 3rem;
+      border: 1px solid var(--gold);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    .cta-note {
+      margin-top: 1.2rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: var(--black);
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.25);
+      text-decoration: none;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      transition: color 0.3s;
+    }
+
+    footer a:hover { color: var(--gold); }
+
+    .footer__social {
+      margin-bottom: 1rem;
+    }
+
+    .footer__social a {
+      font-size: 0.62rem;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.2em;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero__content > * {
+      animation: fade-up 1s ease both;
+    }
+
+    .hero__eyebrow  { animation-delay: 0.3s; }
+    .hero__title    { animation-delay: 0.5s; }
+    .hero__subtitle { animation-delay: 0.7s; }
+    .hero__divider  { animation-delay: 0.85s; }
+    .hero__meta     { animation-delay: 1s; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 480px) {
+      .hero { padding-bottom: 3.5rem; }
+      .countdown__sep { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Santo Domingo Ballet &nbsp;·&nbsp; Una noche especial</p>
+      <h1 class="hero__title">DOLCE</h1>
+      <p class="hero__subtitle">Music and Dance Gala</p>
+      <div class="hero__divider"></div>
+      <p class="hero__meta">
+        25 de abril, 2026 &nbsp;·&nbsp; 8:00 PM<br />
+        Los Establos Ciudad Ecuestre, Santo Domingo
+      </p>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <p class="countdown-label">Faltan</p>
+    <div class="countdown" id="countdown">
+      <div class="countdown__unit">
+        <span class="countdown__number" id="cd-days">--</span>
+        <span class="countdown__text">Días</span>
+      </div>
+      <span class="countdown__sep" aria-hidden="true">·</span>
+      <div class="countdown__unit">
+        <span class="countdown__number" id="cd-hours">--</span>
+        <span class="countdown__text">Horas</span>
+      </div>
+      <span class="countdown__sep" aria-hidden="true">·</span>
+      <div class="countdown__unit">
+        <span class="countdown__number" id="cd-mins">--</span>
+        <span class="countdown__text">Minutos</span>
+      </div>
+      <span class="countdown__sep" aria-hidden="true">·</span>
+      <div class="countdown__unit">
+        <span class="countdown__number" id="cd-secs">--</span>
+        <span class="countdown__text">Segundos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section class="details">
+    <div class="details__inner">
+      <div class="details__item">
+        <span class="details__icon">📅</span>
+        <p class="details__label">Fecha</p>
+        <p class="details__value">Sábado, 25 de abril de 2026</p>
+      </div>
+      <div class="details__item">
+        <span class="details__icon">🕗</span>
+        <p class="details__label">Hora</p>
+        <p class="details__value">8:00 PM</p>
+      </div>
+      <div class="details__item">
+        <span class="details__icon">📍</span>
+        <p class="details__label">Lugar</p>
+        <p class="details__value">Los Establos Ciudad Ecuestre<br />Santo Domingo, R.D.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <a href="https://rapidotickets.com/event/gala-night" target="_blank" rel="noopener" class="cta-btn">
+      Adquirir Entradas
+    </a>
+    <p class="cta-note">Tickets disponibles en rapidotickets.com</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer__social">
+      <a href="https://www.instagram.com/santodomingoballet" target="_blank" rel="noopener">
+        @santodomingoballet
+      </a>
+    </div>
+    <a href="https://perxist.com">perxist.com</a>
+  </footer>
+
+  <script>
+    (function () {
+      const eventDate = new Date('2026-04-25T20:00:00');
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+
+      function tick() {
+        const diff = eventDate - Date.now();
+        if (diff <= 0) {
+          document.getElementById('countdown').innerHTML =
+            '<p style="font-family:Cormorant Garamond,serif;font-size:1.5rem;color:#fff;letter-spacing:.1em">¡Esta noche!</p>';
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cd-days').textContent  = pad(d);
+        document.getElementById('cd-hours').textContent = pad(h);
+        document.getElementById('cd-mins').textContent  = pad(m);
+        document.getElementById('cd-secs').textContent  = pad(s);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
