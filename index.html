@@ -309,6 +309,116 @@
     .hero__divider  { animation-delay: 0.85s; }
     .hero__meta     { animation-delay: 1s; }
 
+    /* ── ARTISTS ── */
+    .artists {
+      padding: 6rem 1.5rem;
+      background: var(--green-dark);
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
+    }
+
+    .artists__inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .artists__eyebrow {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      text-align: center;
+    }
+
+    .artists__heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 300;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 4.5rem;
+    }
+
+    .artists__group + .artists__group {
+      margin-top: 4.5rem;
+      padding-top: 4.5rem;
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
+    }
+
+    .artists__group-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold-light);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.06em;
+    }
+
+    .artist-item {
+      border-bottom: 1px solid rgba(201, 169, 110, 0.1);
+    }
+
+    .artist-item > summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.6rem 0;
+      cursor: pointer;
+      gap: 1rem;
+      user-select: none;
+    }
+
+    .artist-item > summary::-webkit-details-marker { display: none; }
+
+    .artist-item__info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .artist__role {
+      font-size: 0.52rem;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.8;
+    }
+
+    .artist__name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: 0.01em;
+    }
+
+    .artist__chevron {
+      font-size: 1.4rem;
+      color: var(--gold);
+      opacity: 0.4;
+      transition: transform 0.25s ease, opacity 0.25s;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .artist-item[open] > summary .artist__chevron {
+      transform: rotate(90deg);
+      opacity: 0.7;
+    }
+
+    .artist__bio {
+      font-size: 0.78rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.5);
+      font-weight: 300;
+      padding-bottom: 2rem;
+    }
+
     /* ── MOBILE ── */
     @media (max-width: 480px) {
       .hero { padding-bottom: 3.5rem; }
@@ -387,6 +497,168 @@
       Adquirir Entradas
     </a>
     <p class="cta-note">Tickets disponibles en rapidotickets.com</p>
+  </section>
+
+  <!-- ARTISTS -->
+  <section class="artists">
+    <div class="artists__inner">
+      <p class="artists__eyebrow">Los Protagonistas</p>
+      <h2 class="artists__heading">Los Artistas</h2>
+
+      <!-- CUARTETO NOVA -->
+      <div class="artists__group">
+        <p class="artists__group-name">Cuarteto Nova</p>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Violinista y Director</span>
+              <span class="artist__name">Guillermo Mota</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Guillermo Mota es un renombrado violinista y director de orquesta, conocido por su interpretación apasionada y su liderazgo en el escenario. Es miembro de la Orquesta Sinfónica Nacional. Además de su virtuosismo con el violín, Guillermo dirige con maestría, llevando al cuarteto a nuevas propuestas y experiencias musicales inolvidables.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Violonchelo</span>
+              <span class="artist__name">José Antonio Bonillo Guevara</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">José Antonio Bonillo Guevara es un violoncellista con más de 20 años de experiencia profesional. Realizó sus estudios en el Conservatorio Superior Simón Bolívar y en la Academia Latinoamericana de Violonchelos. Actualmente es miembro de la Orquesta Sinfónica Nacional de la República Dominicana y profesor de la cátedra de violoncellos del Conservatorio Nacional de Música, así como de la Academia Dominicana de Música y Artes. Se desempeña además como violoncellista principal de la Orquesta Sinfónica Hispaniola. A lo largo de su carrera ha participado como solista tanto a nivel nacional como internacional, destacándose por su profundidad artística y refinada expresión musical.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Violinista</span>
+              <span class="artist__name">Anarys Iznaga Cruz</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Anarys Iznaga Cruz es una violinista dominicana con sólida formación académica y trayectoria dentro del ámbito orquestal del país. Es integrante de la Orquesta Sinfónica Nacional de la República Dominicana como parte de la sección de segundos violines, destacándose por su disciplina y nivel interpretativo. Realizó sus estudios en la Escuela Elemental de Música Elila Mena, el Conservatorio Nacional de Música y el Conservatorio de Música de Puerto Rico, donde se graduó con honores. A lo largo de su carrera, ha participado en proyectos juveniles e internacionales como la Orquesta de las Américas, consolidando una experiencia artística diversa. Paralelamente, se desempeña como docente, contribuyendo a la formación de nuevas generaciones de músicos en la República Dominicana.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Viola y Compositora</span>
+              <span class="artist__name">Mayrení Morel</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Mayrení Morel es una multiinstrumentista y compositora dominicana, galardonada en múltiples ocasiones. Estudió Composición para Cine y Composición en Berklee College of Music, donde se graduó con honores y obtuvo una especialización en Dirección Orquestal, destacándose por su sensibilidad musical y dominio técnico. Posteriormente, obtuvo una Maestría en Composición y Nuevas Tecnologías en la Universidad de La Rioja, consolidando una formación académica sólida y versátil que respalda su trabajo creativo. Es miembro de la sección de violas de la Orquesta Sinfónica Nacional, donde su interpretación se distingue por una sonoridad profunda, expresiva y cuidadosamente esculpida, aportando carácter y riqueza al tejido orquestal. Como violista, Mayrení combina precisión técnica con una intensidad interpretativa que trasciende lo convencional, logrando ejecuciones que no solo acompañan, sino que cuentan historias y elevan cada obra a una experiencia emocionalmente envolvente.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Cantante Lírica</span>
+              <span class="artist__name">Pura Tayson</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Cantante lírica dominicana nacida en Santo Domingo, realizó su formación musical en el Conservatorio Nacional de Música, donde obtuvo el título de Profesora de Canto en 2008. También es licenciada en Educación Inicial y posee una maestría en Educación Musical por la UASD. A lo largo de su carrera ha recibido importantes reconocimientos, incluyendo Medalla de Plata (2001) y Medalla de Oro (2005) en concursos del Consejo Nacional de Música, así como el Premio Nacional de la Juventud en el año 2000. Ha sido nominada en varias ocasiones a los Premios Soberano como Cantante Lírico del Año. Es directora fundadora del Grupo Vocal "Matisses" y directora del Coro del Banco Central desde 2005. Además, forma parte de la Compañía Lírica Nacional de Bellas Artes, participando como solista en numerosos conciertos bajo la dirección de reconocidos maestros. Ha tenido una destacada labor como docente en el Conservatorio Nacional de Música y la Universidad Autónoma de Santo Domingo.</p>
+        </details>
+      </div>
+
+      <!-- SANTO DOMINGO BALLET -->
+      <div class="artists__group">
+        <p class="artists__group-name">Santo Domingo Ballet</p>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Directora</span>
+              <span class="artist__name">Carolina Silvestre</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Carolina Silvestre cuenta con una Maestría en Danza por la Universidad Internacional de La Rioja y estudios en Liderazgo y gestión de proyectos culturales en la industria creativa y Arte aplicado a diversos contextos sociales, por la Universidad Complutense de Madrid. Es licenciada en Comunicación Corporativa Magna Cum Laude por la Universidad Pontificia Madre y Maestra en Santo Domingo. Realizó una pasantía profesional en Art en Coaching y Spiraldynamik Center en Zúrich, Suiza, y fue jurado del Festival de Danza en Estambul, Turquía. Nominada a los Premios Casandra en el renglón mejor bailarina clásica/contemporánea 2006. Egresada del programa profesional de Bellas Artes, mención intérprete y pedagoga de danza clásica y contemporánea, por L'École Supérieure Rosella Hightower en Cannes y la Universidad de Niza, en Francia. Inició su formación con la pionera de la danza en República Dominicana, Madame Magda Corbett. Su trayectoria como solista incluye el Lugano Theater (Suiza), Palais du Festival de Cannes (Francia), Cinevox Theater y Rigiblik Theater en Zúrich, Teatro Di San Carlo (Italia), TAK Theater (Liechtenstein) y el Miami Dance Festival (Estados Unidos).</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Bailarina</span>
+              <span class="artist__name">Pastora Delgado</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Bailarina clásica dominicana con amplia trayectoria artística y formativa dentro del ámbito de la danza. Se ha destacado por su compromiso con la enseñanza, dedicándose a formar, acompañar y guiar a nuevas generaciones que comparten la pasión por el ballet clásico y desean desarrollarse con disciplina y profundidad. Realizó su formación con destacados maestros de la República Dominicana y complementó sus estudios en el extranjero junto a reconocidos profesionales de la danza, experiencia que enriqueció significativamente su visión artística y técnica. Durante varios años formó parte de dos de las más reconocidas compañías profesionales del país, consolidando una sólida experiencia escénica. Cree firmemente en el talento dominicano y en el poder transformador del arte como herramienta de crecimiento personal y colectivo.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Bailarina</span>
+              <span class="artist__name">Yumi Mana</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Yumi Mana, nacida el 18 de octubre de 2006 en Savigliano, Italia, es una bailarina y alumna de último año de la Escuela Nacional de Danza (ENDANZA), además de pasante del Ballet Nacional Dominicano. Ha complementado su formación con experiencias internacionales en Estados Unidos, Brasil y Francia, continuando su crecimiento artístico y explorando nuevas oportunidades en la danza.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Bailarina</span>
+              <span class="artist__name">Jadeline Almonte</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Jadeline Almonte es egresada de la Escuela Nacional de Danza de la República Dominicana, mención clásico y contemporáneo. Ha participado en importantes producciones como El Cascanueces, interpretando roles como el Vals de las Nieves y el Vals de las Flores en escenarios como el Teatro Nacional y el Gran Teatro de Santiago. También formó parte del segundo acto de El Lago de los Cisnes y colaboró en montajes como La Vivandière, Aguaviva y Leaves of Hope. Su formación artística es integral: estudió piano durante 5 años, toca guitarra, ukelele y flauta dulce. Actualmente cursa la licenciatura en cine.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Bailarina</span>
+              <span class="artist__name">Kimberlyn Ortíz</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Kimberlyn Ortiz Suero, nacida en Santo Domingo, es egresada de la Escuela Nacional de Danza (ENDANZA), con mención en danza clásica-contemporánea. Se ha desempeñado como bailarina, siendo partícipe de festivales y grandes proyectos artísticos del país, así como maestra en diversas academias. Actualmente es bailarina colaboradora del Ballet Nacional Dominicano. Estudia la carrera de Comunicación Digital, integrando el arte y la comunicación en su desarrollo profesional.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Bailarín</span>
+              <span class="artist__name">Javier Genao</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Joendy Javier Genao, egresado de la Escuela Nacional de Danza, es integrante del Ballet Nacional Dominicano y estudiante de la Licenciatura en Estadística en la Universidad Autónoma de Santo Domingo.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Bailarín</span>
+              <span class="artist__name">Ednis Mallol</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Ednis Mallol es un intérprete dominicano con más de 15 años de experiencia profesional en el ámbito de la danza. Posee un Master Universitario en Artes Escénicas por la Universidad Rey Juan Carlos, consolidando una sólida formación que respalda su trayectoria artística. A lo largo de su carrera, se ha destacado como bailarín en importantes compañías como el Ballet de Cámara de Madrid, Grand Rapids Ballet y el Ballet Nacional Dominicano, desarrollando una experiencia escénica diversa tanto a nivel nacional como internacional. Su enfoque artístico está profundamente marcado por la pasión por las artes, la valoración de la diversidad y el interés por las conexiones humanas. Se caracteriza por una constante búsqueda de la belleza, la autenticidad y el crecimiento personal en cada etapa de su vida.</p>
+        </details>
+
+        <details class="artist-item">
+          <summary>
+            <div class="artist-item__info">
+              <span class="artist__role">Bailarín</span>
+              <span class="artist__name">Ángel Rodríguez</span>
+            </div>
+            <span class="artist__chevron">›</span>
+          </summary>
+          <p class="artist__bio">Inició en la danza a la edad de 14 años de manera autodidacta. Posteriormente inicia su formación oficial en la Escuela Nacional de Danza de la República Dominicana, donde actualmente cursa su penúltimo año, perfilándose como talento nacional por su disciplina y dedicación en el arte clásico.</p>
+        </details>
+      </div>
+
+    </div>
   </section>
 
   <!-- FOOTER -->
